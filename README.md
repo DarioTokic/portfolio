@@ -4,11 +4,12 @@ Personal portfolio site. Built with Next.js (App Router), Tailwind CSS, and Fram
 
 ## Run locally
 
-Requires Node.js 18.17+ (Node 20 recommended).
+Uses [Bun](https://bun.sh) as the package manager and runtime (Next.js 16 / React 19).
+Install Bun once: `curl -fsSL https://bun.sh/install | bash`
 
 ```bash
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 Open http://localhost:3000
@@ -16,8 +17,8 @@ Open http://localhost:3000
 ## Build for production
 
 ```bash
-npm run build
-npm run start
+bun run build
+bun run start
 ```
 
 ## Project structure
