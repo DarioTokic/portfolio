@@ -46,10 +46,10 @@ export default function Creative() {
             </div>
             <div className="overflow-hidden rounded-xl border border-ink-700">
               <Image
-                src="/art/lepra-cover-v2.jpg"
-                alt="Lepra — album art"
+                src="/photos/bass.jpg"
+                alt="Dario playing bass live with Lepra"
                 width={600}
-                height={600}
+                height={900}
                 className="h-auto w-full object-cover"
               />
             </div>

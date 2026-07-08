@@ -42,6 +42,7 @@ const profile = {
 // Shared art list (titles localized below via kind labels)
 const artFiles: { file: string; wide?: boolean }[] = [
   { file: "/art/passat-space.jpg", wide: true },
+  { file: "/art/lepra-cover-v2.jpg" },
   { file: "/art/ciga-throwup.jpg", wide: true },
   { file: "/art/guzla.jpg", wide: true },
   { file: "/art/dylan-dog.jpg" },
