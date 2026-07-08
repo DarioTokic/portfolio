@@ -34,6 +34,18 @@ export default function Nav() {
 
   const cv = lang === "bs" ? t.profile.cvBs : t.profile.cvEn;
 
+  const go = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    // release the scroll lock synchronously before scrolling
+    document.body.style.overflow = "";
+    setOpen(false);
+    const el = document.querySelector(href);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", href);
+    }
+  };
+
   return (
     <>
       <header
@@ -94,7 +106,7 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              onClick={() => setOpen(false)}
+              onClick={(e) => go(e, l.href)}
               className="block rounded-xl px-4 py-2.5 text-sm font-medium text-slate-200 transition-colors hover:bg-ink-700/60 hover:text-white"
               role="menuitem"
             >
