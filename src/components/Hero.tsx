@@ -57,7 +57,7 @@ export default function Hero() {
             <div className="absolute -inset-3 rounded-3xl bg-accent/10 blur-2xl" aria-hidden />
             <div className="relative overflow-hidden rounded-3xl border border-ink-600 bg-ink-800">
               <Image
-                src="/photos/portrait.jpg"
+                src="/photos/hero.jpg"
                 alt="Dario Tokić"
                 width={640}
                 height={800}
