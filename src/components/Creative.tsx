@@ -16,9 +16,9 @@ export default function Creative() {
         </h2>
       </Reveal>
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-[1fr_1.6fr]">
-        <Reveal>
-          <div className="flex h-full flex-col justify-between gap-6 rounded-2xl border border-ink-700 bg-ink-800/50 p-6">
+      <div className="mt-10 grid items-stretch gap-5 lg:grid-cols-[1fr_1.6fr]">
+        <Reveal className="h-full">
+          <div className="flex h-full flex-col gap-6 rounded-2xl border border-ink-700 bg-ink-800/50 p-6">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-coral/80">
                 {t.creative.music.label}
@@ -44,13 +44,13 @@ export default function Creative() {
                 </a>
               </div>
             </div>
-            <div className="overflow-hidden rounded-xl border border-ink-700">
+            <div className="relative min-h-[240px] flex-1 overflow-hidden rounded-xl border border-ink-700">
               <Image
                 src="/photos/bass.jpg"
                 alt="Dario playing bass live with Lepra"
-                width={600}
-                height={900}
-                className="h-auto w-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover object-center"
               />
             </div>
           </div>
