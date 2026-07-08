@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLang } from "@/i18n/LanguageProvider";
 
@@ -15,49 +14,30 @@ export default function Hero() {
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid items-center gap-12 md:grid-cols-[1.4fr_1fr]">
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-5 inline-flex items-center gap-2 rounded-full border border-ink-600 bg-ink-800/60 px-3 py-1 text-xs font-medium text-slate-300"
-            >
+            <div className="load-in mb-5 inline-flex items-center gap-2 rounded-full border border-ink-600 bg-ink-800/60 px-3 py-1 text-xs font-medium text-slate-300">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               {t.hero.available}
-            </motion.div>
+            </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              className="mb-3 font-mono text-sm uppercase tracking-[0.2em] text-accent"
-            >
+            <p className="load-in mb-3 font-mono text-sm uppercase tracking-[0.2em] text-accent" style={{ animationDelay: "0.05s" }}>
               {t.hero.kicker}
-            </motion.p>
+            </p>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="max-w-2xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            <h1
+              className="load-in max-w-2xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
+              style={{ animationDelay: "0.1s" }}
             >
               <span className="text-gradient">{t.hero.title}</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg"
+            <p
+              className="load-in mt-6 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg"
+              style={{ animationDelay: "0.2s" }}
             >
               {t.hero.subtitle}
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-8 flex flex-wrap items-center gap-3"
-            >
+            <div className="load-in mt-8 flex flex-wrap items-center gap-3" style={{ animationDelay: "0.3s" }}>
               <a
                 href="#work"
                 className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-ink-950 transition-transform hover:scale-[1.03]"
@@ -70,15 +50,10 @@ export default function Hero() {
               >
                 {t.hero.ctaContact}
               </a>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative mx-auto w-full max-w-xs"
-          >
+          <div className="load-in relative mx-auto w-full max-w-xs" style={{ animationDelay: "0.15s" }}>
             <div className="absolute -inset-3 rounded-3xl bg-accent/10 blur-2xl" aria-hidden />
             <div className="relative overflow-hidden rounded-3xl border border-ink-600 bg-ink-800">
               <Image
@@ -90,7 +65,7 @@ export default function Hero() {
                 className="h-full w-full object-cover"
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
